@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   
+   .game-board{
+     width: 100%;
+     height: 600px;
+     border-bottom: 30px solid rgb(255, 205, 247);
+     margin: 0 auto;
+     position: relative;
+     overflow: hidden;
+     background: linear-gradient(#39c0ff, #d2f1ff );
+   }
+   
+   .pipe{
+     position: absolute;
+     bottom: 0;
+     width: 70px;
+     animation: pipe-animation 1.5s infinite linear;
+   }
+   
+   .hellokity{
+     width: 150px;
+     position: absolute;
+     bottom: 0;
+   }
+   
+   .jump{
+       animation: jump 500ms ease-out;
+   }
+   
+   .clouds{
+     position: absolute;
+     animation: clouds-animation 20s infinite linear;
+   }
+   
+   @keyframes pipe-animation{
+     from{
+       right: -80px;
+     }
+     
+     to{
+       right: 100%;
+     }
+   }
+   
+   @keyframes jump{
+     0%{
+       bottom: 0;
+     }
+     40%{
+        bottom: 180px;   
+     }
+     50%{
+       bottom: 180px;
+     }
+     60%{
+       bottom: 180px;   
+     }
+     100%{
+       bottom: 0;
+     }
+   }
+   
+   @keyframes clouds-animation{
+     from{
+       right: -600px;
+     }
+     
+     to{
+       right: 100%;
+     }
+   }
